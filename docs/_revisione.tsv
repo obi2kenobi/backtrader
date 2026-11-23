@@ -1,13 +1,13 @@
 file	classe	affermazione	atteso	trovato	esito
-README.rst	installazione	pip install backtrader	package pip installabile	README.rst:134-136; setup.py contiene setup()	VERIFICATO
-README.rst	requisiti	Python >= 3.2	setup.py supporta 3.2+	setup.py:88-93 classifiers Python 3.2+	VERIFICATO
-README.rst	API principale	SignalStrategy con signal_add	classe existe con signal_add	backtrader/strategy.py:1524 class SignalStrategy	VERIFICATO
-README.rst	data feed	YahooFinanceData da csv/online	feed yahoo.py con YahooFinanceData	backtrader/feeds/yahoo.py class YahooFinanceData	VERIFICATO
-README.rst	campioni	sigsmacross.py e sigsmacross2.py presenti	filename citati nel README	samples/sigsmacross/sigsmacross.py e sigsmacross2.py	VERIFICATO
-README.rst	analyzers	pyfolio integration (deprecated)	pyfolio.py presente tra gli analyzers	backtrader/analyzers/pyfolio.py	VERIFICATO
-README.rst	API principale	List of built-in Indicators (122)	122 classi indicator	123 classi grepped in backtrader/indicators/*.py	DIVERSO
-changelog.txt	versione	Ultima release 1.9.76.123	corrisponde a version.py	changelog.txt:1 `1.9.76.123:` ; backtrader/version.py __version__ = '1.9.76.123'	VERIFICATO
-changelog.txt	bugfix	PR#405 Fix initial Renko bricks	entrazione presente	changelog.txt:2 PR#405	VERIFICATO
-changelog.txt	bugfix	PR#403 partial order execution	entrazione presente	changelog.txt:4 PR#403	VERIFICATO
-changelog.txt	bugfix	1.9.75.123: TWS API Bust events err 10225	entrazione presente	changelog.txt:13 PR#396 (TWS API)	VERIFICATO
-changelog.txt	bugfix	1.9.74.123: Correct calculation in haDelta	entrazione presente	changelog.txt:29 `1.9.74.123:` ; changelog.txt:30 haDelta	VERIFICATO
+README.rst	AGGIORNATO	pip install backtrader	package pip installabile	README.rst:134-136; setup.py contiene setup()	VERIFICATO
+README.rst	AGGIORNATO	Python >= 3.2	setup.py supporta 3.2+	setup.py:88-93 classifiers Python 3.2+	VERIFICATO
+README.rst	AGGIORNATO	SignalStrategy con signal_add	classe existe con signal_add	backtrader/strategy.py:1524 class SignalStrategy	VERIFICATO
+README.rst	AGGIORNATO	YahooFinanceData da csv/online	feed yahoo.py con YahooFinanceData	backtrader/feeds/yahoo.py class YahooFinanceData	VERIFICATO
+README.rst	AGGIORNATO	sigsmacross.py e sigsmacross2.py presenti	filename citati nel README	samples/sigsmacross/sigsmacross.py e sigsmacross2.py	VERIFICATO
+README.rst	AGGIORNATO	pyfolio integration (deprecated)	pyfolio.py presente tra gli analyzers	backtrader/analyzers/pyfolio.py	VERIFICATO
+README.rst	DA CORREGGERE	List of built-in Indicators (122)	122 classi indicator	123 classi grepped in backtrader/indicators/*.py	DIVERSO
+changelog.txt	AGGIORNATO	Ultima release 1.9.76.123	corrisponde a version.py	changelog.txt:1 `1.9.76.123:` ; backtrader/version.py __version__ = '1.9.76.123'	VERIFICATO
+changelog.txt	AGGIORNATO	PR#405 Fix initial Renko bricks	entrazione presente	changelog.txt:2 PR#405	VERIFICATO
+changelog.txt	AGGIORNATO	PR#403 partial order execution	entrazione presente	changelog.txt:4 PR#403	VERIFICATO
+changelog.txt	AGGIORNATO	1.9.75.123: TWS API Bust events err 10225	entrazione presente	changelog.txt:13 PR#396 (TWS API)	VERIFICATO
+changelog.txt	AGGIORNATO	1.9.74.123: Correct calculation in haDelta	entrazione presente	changelog.txt:29 `1.9.74.123:` ; changelog.txt:30 haDelta	VERIFICATO
