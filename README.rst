@@ -111,7 +111,7 @@ Read the full documentation at:
 
   - `Documentation <http://www.backtrader.com/docu>`_
 
-List of built-in Indicators (122)
+List of built-in Indicators (123)
 
   - `Indicators Reference <http://www.backtrader.com/docu/indautoref.html>`_
 

@@ -5,7 +5,7 @@ README.rst	AGGIORNATO	SignalStrategy con signal_add	classe existe con signal_add
 README.rst	AGGIORNATO	YahooFinanceData da csv/online	feed yahoo.py con YahooFinanceData	backtrader/feeds/yahoo.py class YahooFinanceData	VERIFICATO
 README.rst	AGGIORNATO	sigsmacross.py e sigsmacross2.py presenti	filename citati nel README	samples/sigsmacross/sigsmacross.py e sigsmacross2.py	VERIFICATO
 README.rst	AGGIORNATO	pyfolio integration (deprecated)	pyfolio.py presente tra gli analyzers	backtrader/analyzers/pyfolio.py	VERIFICATO
-README.rst	DA CORREGGERE	List of built-in Indicators (122)	122 classi indicator	123 classi grepped in backtrader/indicators/*.py	DIVERSO
+README.rst	AGGIORNATO	List of built-in Indicators (122)	122 classi indicator	124 classi in backtrader/indicators, 123 escludendo la base Indicator (AST)	OK
 changelog.txt	AGGIORNATO	Ultima release 1.9.76.123	corrisponde a version.py	changelog.txt:1 `1.9.76.123:` ; backtrader/version.py __version__ = '1.9.76.123'	VERIFICATO
 changelog.txt	AGGIORNATO	PR#405 Fix initial Renko bricks	entrazione presente	changelog.txt:2 PR#405	VERIFICATO
 changelog.txt	AGGIORNATO	PR#403 partial order execution	entrazione presente	changelog.txt:4 PR#403	VERIFICATO
