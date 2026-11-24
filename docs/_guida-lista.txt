@@ -1,2 +1,4 @@
+README.md
+docs/LLM-GUIDA.md
 README.rst
 changelog.txt

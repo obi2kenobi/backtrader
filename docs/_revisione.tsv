@@ -1,13 +1,28 @@
 file	classe	affermazione	atteso	trovato	esito
-README.rst	AGGIORNATO	pip install backtrader	package pip installabile	README.rst:134-136; setup.py contiene setup()	VERIFICATO
-README.rst	AGGIORNATO	Python >= 3.2	setup.py supporta 3.2+	setup.py:88-93 classifiers Python 3.2+	VERIFICATO
-README.rst	AGGIORNATO	SignalStrategy con signal_add	classe existe con signal_add	backtrader/strategy.py:1524 class SignalStrategy	VERIFICATO
-README.rst	AGGIORNATO	YahooFinanceData da csv/online	feed yahoo.py con YahooFinanceData	backtrader/feeds/yahoo.py class YahooFinanceData	VERIFICATO
-README.rst	AGGIORNATO	sigsmacross.py e sigsmacross2.py presenti	filename citati nel README	samples/sigsmacross/sigsmacross.py e sigsmacross2.py	VERIFICATO
-README.rst	AGGIORNATO	pyfolio integration (deprecated)	pyfolio.py presente tra gli analyzers	backtrader/analyzers/pyfolio.py	VERIFICATO
+README.rst	AGGIORNATO	pip install backtrader	package pip installabile	README.rst:134-136; setup.py contiene setup()	OK
+README.rst	AGGIORNATO	Python >= 3.2	setup.py supporta 3.2+	setup.py:88-93 classifiers Python 3.2+	OK
+README.rst	AGGIORNATO	SignalStrategy con signal_add	classe esiste con signal_add	backtrader/strategy.py:1524 class SignalStrategy	OK
+README.rst	AGGIORNATO	YahooFinanceData da csv/online	feed yahoo.py con YahooFinanceData	backtrader/feeds/yahoo.py class YahooFinanceData	OK
+README.rst	AGGIORNATO	sigsmacross.py e sigsmacross2.py presenti	filename citati nel README	samples/sigsmacross/sigsmacross.py e sigsmacross2.py	OK
+README.rst	AGGIORNATO	pyfolio integration (deprecated)	pyfolio.py presente tra gli analyzers	backtrader/analyzers/pyfolio.py	OK
 README.rst	AGGIORNATO	List of built-in Indicators (122)	122 classi indicator	124 classi in backtrader/indicators, 123 escludendo la base Indicator (AST)	OK
-changelog.txt	AGGIORNATO	Ultima release 1.9.76.123	corrisponde a version.py	changelog.txt:1 `1.9.76.123:` ; backtrader/version.py __version__ = '1.9.76.123'	VERIFICATO
-changelog.txt	AGGIORNATO	PR#405 Fix initial Renko bricks	entrazione presente	changelog.txt:2 PR#405	VERIFICATO
-changelog.txt	AGGIORNATO	PR#403 partial order execution	entrazione presente	changelog.txt:4 PR#403	VERIFICATO
-changelog.txt	AGGIORNATO	1.9.75.123: TWS API Bust events err 10225	entrazione presente	changelog.txt:13 PR#396 (TWS API)	VERIFICATO
-changelog.txt	AGGIORNATO	1.9.74.123: Correct calculation in haDelta	entrazione presente	changelog.txt:29 `1.9.74.123:` ; changelog.txt:30 haDelta	VERIFICATO
+changelog.txt	AGGIORNATO	Ultima release 1.9.76.123	corrisponde a version.py	changelog.txt:1 `1.9.76.123:` ; backtrader/version.py __version__ = '1.9.76.123'	OK
+changelog.txt	AGGIORNATO	PR#405 Fix initial Renko bricks	entrazione presente	changelog.txt:2 PR#405	OK
+changelog.txt	AGGIORNATO	PR#403 partial order execution	entrazione presente	changelog.txt:4 PR#403	OK
+changelog.txt	AGGIORNATO	1.9.75.123: TWS API Bust events err 10225	entrazione presente	changelog.txt:13 PR#396 (TWS API)	OK
+changelog.txt	AGGIORNATO	1.9.74.123: Correct calculation in haDelta	entrazione presente	changelog.txt:29 `1.9.74.123:` ; changelog.txt:30 haDelta	OK
+README.md	AGGIORNATO	package installabile via pip	pip install backtrader (install/source)	README.md:14-20 pip install backtrader e pip install .	OK
+README.md	AGGIORNATO	Python 3.2+ classifiers	setup.py supporta 3.2+	setup.py:87-93 classifiers Python 3.2-3.7	OK
+README.md	AGGIORNATO	import backtrader stampa versione	import funziona; __version__	python3 -c "import backtrader; print(backtrader.__version__)" -> 1.9.76.123	OK
+README.md	AGGIORNATO	bt.SignalStrategy con signal_add usato come esempio	SignalStrategy esiste	backtrader/strategy.py:1524 class SignalStrategy	OK
+README.md	AGGIORNATO	SmaCross usa bt.ind.SMA e bt.ind.CrossOver	SMA e CrossOver esistono negli indicatori	backtrader/indicators/crossover.py:112 class CrossOver; backtrader/indicators/sma.py class SMA	OK
+README.md	AGGIORNATO	YahooFinanceData feed citato	feed presente	backtrader/feeds/yahoo.py class YahooFinanceData	OK
+README.md	AGGIORNATO	samples/sigsmacross citata	file presenti	samples/sigsmacross/sigsmacross.py e sigsmacross2.py	OK
+README.md	AGGIORNATO	test via unittest discover	tests/ presente	tests/ (cartella) con unit test	OK
+docs/LLM-GUIDA.md	AGGIORNATO	cerebro.py e Strategy/SignalStrategy	cerebro.py con Cerebro; strategy.py con SignalStrategy	backtrader/cerebro.py:55 class Cerebro; backtrader/strategy.py:1524 class SignalStrategy	OK
+docs/LLM-GUIDA.md	AGGIORNATO	15 analyzers	15 analyzer files escludendo __init__.py	15 file in backtrader/analyzers/*.py (tranne __init__.py)	OK
+docs/LLM-GUIDA.md	AGGIORNATO	YahooFinanceData in backtrader/feeds/	feed presente	backtrader/feeds/yahoo.py class YahooFinanceData	OK
+docs/LLM-GUIDA.md	AGGIORNATO	14 file in feeds/ (tra gli altri)	feeds inclusi	backtrader/feeds/ blaze, btcsv, csvgeneric, ibdata, pandafeed, quandl, ...	OK
+docs/LLM-GUIDA.md	AGGIORNATO	Indicators 124 classi / 123 escludendo base	124/123 classi	backtrader/indicators/*.py 49 file; AST: 124 classi, 123 excl. Indicator (dal preambolo)	OK
+docs/LLM-GUIDA.md	AGGIORNATO	pyfolio integration	pyfolio.py presente	backtrader/analyzers/pyfolio.py	OK
+docs/LLM-GUIDA.md	AGGIORNATO	versione 1.9.76.123	version.py	backtrader/version.py:25 __version__ = '1.9.76.123'	OK
