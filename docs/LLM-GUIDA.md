@@ -5,9 +5,10 @@ Scopo: repository di backtrader (backtesting di strategie su dati storici), mant
 ## Struttura reale
 - `backtrader/`: nucleo — cerebro.py (motore), strategy.py, analyzers/, feeds/, indicators/, brokers/, commissions/, dataseries.py.
 - `samples/`: esempi di strategie; `tests/`: test; `docs/`: documentazione di lavoro (non parte del pacchetto).
-- `setup.py`, `README.rst`, `changelog.txt`, `pypi.sh`.
+- `setup.py`, `README.rst`, `README.md` (italiano), `changelog.txt`, `pypi.sh`.
 
 ## Installazione / requisiti
+- README.md (italiano) creato per questo audit; installazione pip via `pip install backtrader`.
 - Python 3.2+ (classifiers setup.py); installazione via `pip install backtrader` (README:134-136).
 - Nessun requisito di system library verificato oltre a Python.
 
