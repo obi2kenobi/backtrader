@@ -100,7 +100,7 @@ class DrawDown(bt.Analyzer):
 
         # calculate current drawdown values
         r.moneydown = moneydown = self._maxvalue - self._value
-        r.drawdown = drawdown = 100.0 * moneydown / self._maxvalue
+        r.drawdown = drawdown = 100.0 * moneydown / self._maxvalue if self._maxvalue > 0.0 else 0.0
 
         # maxximum drawdown values
         r.max.moneydown = max(r.max.moneydown, moneydown)
