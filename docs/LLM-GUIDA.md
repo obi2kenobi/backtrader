@@ -40,3 +40,6 @@ Scopo: repository di backtrader (backtesting di strategie su dati storici), mant
 
 ## Documenti datati
 - Nessun archivio ufficiale dentro `docs/`; `docs/_inventario.tsv` e `_revisione.tsv` sono appunti di revisione (2026-11).
+
+## Istruzioni d'uso
+Vedi `docs/ISTRUZIONI.md` per istruzioni complete di uso di ogni software del repo.
