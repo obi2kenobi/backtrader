@@ -1,14 +1,18 @@
 # BUG-G4 — candidati bug (M-031.8b.1)
 
-CANDIDATO-1: backtrader/analyzers/drawdown.py:108-109 — divisione per zero su _maxvalue
-  `self.rets.drawdown = drawdown = 100.0 * moneydown / self._maxvalue`.
-  Se il broker ha valore 0 (oppure nessun notify_fund con valore positivo), _maxvalue resta 0.0
-  e moneydown = 0.0 -> ZeroDivisionError in `next()`, crash dell'analisi e del run.
+## BUG-1
+Dove: backtrader/analyzers/drawdown.py:108-109 — `next()`, `100.0 * moneydown / self._maxvalue`.
+Gravità: media — crash dell'analisi (e del run) quando broker valore 0 / _maxvalue non impostato.
+Prova: riproduzione diretta su instance `DrawDown.__new__`: `_maxvalue=0.0`, `_value=0.0` -> ZeroDivisionError ("division by zero").
+Correzione: guard `if self._maxvalue > 0.0` — drawdown = 0.0 altrimenti. Commit 1e73951.
+Test: riproduzione dopo fix — `next()` esce 0.0 senza eccezione. Test di regressione repo non eseguibili in ambiente (matplotlib/pandas mancanti, pre-esistente).
 
-CANDIDATO-2: backtrader/analyzers/returns.py:140 — divisione per zero su _tcount
-  `self.rets['ravg'] = ravg = rtot / self._tcount`.
-  In `stop()`, se nessun sottoperiodo si è completato (_tcount == 0, es. run a tick singolo o
-  timeframe non attraversato), rtot / 0 -> ZeroDivisionError, crash nell'analisi Returns.
+## BUG-2
+Dove: backtrader/analyzers/returns.py:140 — `stop()`, `rtot / self._tcount`.
+Gravità: media — crash dell'analisi Returns se nessun sottoperiodo si è completato (_tcount == 0).
+Prova: divisione `rtot / _tcount` con `_tcount=0` -> ZeroDivisionError.
+Correzione: `ravg = rtot / self._tcount if self._tcount > 0 else rtot`. Commit a7ba9c2.
+Test: riproduzione dopo fix — ravg = rtot (fallback), nessun ZeroDivisionError. Test di regressione repo non eseguibili in ambiente (matplotlib/pandas mancanti, pre-esistente).
 
 CANDIDATO-3: backtrader/strategy.py:577 e strategy.py:1619 — default mutabili `qorders=[], qtrades=[]`
   `def _notify(self, qorders=[], qtrades=[])`. Non mutati attualmente, ma sono default condivisi;
