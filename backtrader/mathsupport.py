@@ -35,7 +35,10 @@ def average(x, bessel=False):
     Returns:
       A float with the average of the elements of x
     '''
-    return math.fsum(x) / (len(x) - bessel)
+    n = len(x) - bessel
+    if n <= 0:
+        raise ValueError('average: not enough samples (len=%d, bessel=%r)' % (len(x), bessel))
+    return math.fsum(x) / n
 
 
 def variance(x, avgx=None):
