@@ -70,3 +70,5 @@ python -m unittest discover -s tests
 Nota: il download dati YahooFinanceData dipende da servizi online; i feed storici possono variare.
 
 Istruzioni d'uso: docs/ISTRUZIONI.md
+
+Scheda tecnica: docs/SCHEDA-TECNICA.md

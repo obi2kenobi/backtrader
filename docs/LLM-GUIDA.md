@@ -43,3 +43,6 @@ Scopo: repository di backtrader (backtesting di strategie su dati storici), mant
 
 ## Istruzioni d'uso
 Vedi `docs/ISTRUZIONI.md` per istruzioni complete di uso di ogni software del repo.
+
+## Scheda tecnica
+Vedi `docs/SCHEDA-TECNICA.md` per la scheda tecnica sintetica del repo.
