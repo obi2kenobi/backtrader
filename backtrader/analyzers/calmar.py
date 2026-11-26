@@ -104,7 +104,11 @@ class Calmar(bt.TimeFrameAnalyzerBase):
             self._values.append(self.strategy.broker.getvalue())
         else:
             self._values.append(self.strategy.broker.fundvalue)
-        rann = math.log(self._values[-1] / self._values[0]) / len(self._values)
+        v0 = self._values[0]
+        if v0 <= 0.0 or self._values[-1] <= 0.0:
+            rann = 0.0
+        else:
+            rann = math.log(self._values[-1] / v0) / len(self._values)
         self.calmar = calmar = rann / (self._mdd or float('Inf'))
 
         self.rets[self.dtkey] = calmar
